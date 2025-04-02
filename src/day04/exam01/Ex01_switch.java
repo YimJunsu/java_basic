@@ -1,7 +1,6 @@
 package day04.exam01;
 
-// 스위치/케이스 문
-public class Ex01_switchcase {
+public class Ex01_switch {
     public static void main(String[] args) {
         int rank = 1;
         switch (rank) {

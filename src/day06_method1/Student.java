@@ -1,4 +1,4 @@
-package day06;
+package day06_method1;
 
 public class Student {
     int id; // 학번

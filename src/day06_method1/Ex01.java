@@ -1,4 +1,4 @@
-package day06;
+package day06_method1;
 
 public class Ex01 {
     public static void main(String[] args) {

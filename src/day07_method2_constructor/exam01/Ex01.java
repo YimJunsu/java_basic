@@ -1,4 +1,4 @@
-package day07_method2.exam01;
+package day07_method2_constructor.exam01;
 
 public class Ex01 {
     public static void main(String[] args) {

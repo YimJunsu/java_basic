@@ -1,4 +1,4 @@
-package day07_method2.exam02_생성자;
+package day07_method2_constructor.exam02_constructor;
 
 public class Student {
     int id; // 학번

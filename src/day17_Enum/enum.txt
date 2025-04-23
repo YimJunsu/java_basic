@@ -1,0 +1,23 @@
+Java의 enum과 C의 struct(구조체)
+
+공통점 :
+        1) 둘 다 사용자 정의 타입이다.
+        2) 프로그램을 더 읽기 좋게 만들고, 의미 있는 이름을 부여할 수 있다.
+차이점 :
+항목 |                        enum (Java) | struct (C)
+목적 | 고정된 상수 집합 정의                 | **여러 개의 변수(데이터)**를 하나의 묶음으로
+예시 | USER, ADMIN, MANAGER처럼 정해진 값들 | name, age, height 등 속성을 가진 사람 구조
+값   | 값이 고정되어 있음 (변하지 않음)       | 각각의 멤버는 값이 바뀔 수 있음
+기능 | Java에서는 메서드, 필드도 가질 수 있음 | C 구조체는 데이터만 저장, 함수는 못 가짐
+
+코드 예시 비교
+public enum MemberType {
+    USER, ADMIN, MANAGER
+}
+-------------------------
+struct Person {
+    char name[20];
+    int age;
+    float height;
+};
+

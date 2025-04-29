@@ -1,0 +1,39 @@
+람다식 - 함수형 프로그래밍 스타일로 코드를 작성하게 해주는 표현식
+    기본 형태 : ( 매개변수 ) -> { 실행문 }
+    (int a, int b) -> { return a + b; }
+
+람다식 사용시 반드시 함수형 인터페이스 필요(추상메서드가 하나만 있는 인터페이스)
+    예: Comparator<T>, Runnable, Callable, Consumer<T> 등
+    + Collections.sort(), forEach(), stream().filter(), map() 등에서 자주 사용됨
+
+람다식 문법 요약
+    - 매개변수 없음	            () -> System.out.println("Hi")
+    - 매개변수 1개	            s -> s.length()
+    - 매개변수 여러 개	        (a, b) -> a + b
+    - 실행문 1개면 {} 생략 가능	(a, b) -> a + b
+    - 리턴값이 있는 경우	    (a, b) -> { return a * b; }
+
+Ex) 함수형 인터페이스 예시
+@FunctionalInterface
+interface MyPrinter {
+    void print(String message);
+}
+
+MyPrinter printer = (msg) -> System.out.println(msg);
+printer.print("Hello Lambda!"); // 출력: Hello Lambda!
+
+
+
+Ex) 정렬시 람다 사용
+List<String> list = Arrays.asList("banana", "apple", "cherry");
+
+// 예전 방식 (익명 클래스)
+Collections.sort(list, new Comparator<String>() {
+    @Override
+    public int compare(String o1, String o2) {
+        return o1.compareTo(o2);
+    }
+});
+
+// 람다식으로!
+Collections.sort(list, (a, b) -> a.compareTo(b));
